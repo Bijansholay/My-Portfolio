@@ -9,3 +9,4 @@ Files added/changed:
 - `script.js` — small interactions (menu toggle + demo contact handler)
 
 Customize the content in `index.html`, add your `resume.pdf` to the project root, and replace placeholder images and text.
+[l](https://roadmap.sh/projects/github-actions-deployment-workflow)
