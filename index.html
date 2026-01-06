@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Simple responsive portfolio site" />
+  <title>Najib — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <div class="logo">YN</div>
+      <div>
+        <div style="font-weight:700">Sholadoye Najib Adebisi</div>
+        <div class="muted" style="font-size:0.9rem">DevOps Engineer</div>
+      </div>
+    </div>
+    <div>
+      <button class="menu-toggle">☰</button>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Hi, Najib</h1>
+        <p class="lead">I build clean, accessible web experiences and small apps. I enjoy working on UI, performance, and developer tooling.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Contact Me</a>
+          <a class="btn btn-ghost" href="#projects">See Projects</a>
+        </div>
+      </div>
+      <aside>
+        <div class="profile-card">
+          <img src="https://via.placeholder.com/300x200.png?text=Photo" alt="Profile photo" />
+          <p class="muted" style="margin-top:8px">Based in Your City · Open to work</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p class="muted">I’m a developer focused on building fast, accessible web interfaces. I work with HTML, CSS, and JavaScript and enjoy working across the stack.</p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project One</h3>
+          <p class="muted">A short description of the project. Links to a demo or repository.</p>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p class="muted">A short description of the project. Links to a demo or repository.</p>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p class="muted">A short description of the project. Links to a demo or repository.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p class="muted">Want to work together or have a question? Send a message.</p>
+      <form id="contactForm" class="contact-form" action="#" method="POST">
+        <input class="input" type="text" name="name" placeholder="Your name" required />
+        <input class="input" type="email" name="email" placeholder="Email" required />
+        <textarea class="input" name="message" rows="6" placeholder="Message" required></textarea>
+        <div>
+          <button class="btn btn-primary" type="submit">Send</button>
+          <a class="btn btn-ghost" href="mailto:your.email@example.com">Email directly</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container center">
+    <p class="muted">© Your Name — <a href="https://github.com" target="_blank">GitHub</a> · <a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
