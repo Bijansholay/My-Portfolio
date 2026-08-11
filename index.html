@@ -3,90 +3,747 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Simple responsive portfolio site" />
-  <title>Najib — Portfolio</title>
+  <meta name="description" content="Portfolio of Sholadoye Najib Adebisi - DevOps Engineer & Backend Developer. Designing scalable AWS cloud infrastructure and high-performance Node.js APIs." />
+  <title>Najib Sholadoye — DevOps & Backend Infrastructure Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="container header">
-    <div class="brand">
-      <div class="logo">YN</div>
-      <div>
-        <div style="font-weight:700">Sholadoye Najib Adebisi</div>
-        <div class="muted" style="font-size:0.9rem">DevOps Engineer</div>
-      </div>
-    </div>
-    <div>
-      <button class="menu-toggle">☰</button>
-      <nav>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="brand">
+        <div class="logo">YN</div>
+        <div class="brand-text">
+          <span class="name">Sholadoye Najib Adebisi</span>
+          <span class="title">DevOps & Backend Engineer</span>
+        </div>
+      </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+
+      <nav class="nav" id="navMenu">
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#terminal-section">Terminal</a></li>
+          <li><a href="#projects">Architecture</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="resume.pdf" target="_blank">Resume</a></li>
+          <li><a class="nav-cta" href="#resume-download">Get CV</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div>
-        <h1>Hi, Najib</h1>
-        <p class="lead">I build clean, accessible web experiences and small apps. I enjoy working on UI, performance, and developer tooling.</p>
-        <div class="cta">
-          <a class="btn btn-primary" href="#contact">Contact Me</a>
-          <a class="btn btn-ghost" href="#projects">See Projects</a>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="about">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot pulsing"></span>
+            <span>Available for Backend & DevOps roles</span>
+          </div>
+          <h1>Architecting Scalable Cloud Systems & Solid APIs</h1>
+          <p class="lead">
+            I am a Backend Engineer and DevOps Architect specializing in designing resilient multi-service AWS systems and robust Node.js architectures. Known for a shipping mindset, quick prototyping, and managing infrastructure pivots under pressure.
+          </p>
+          
+          <div class="hero-tags">
+            <span class="tech-tag-hero"><span class="tag-icon aws-icon"></span>AWS Cloud</span>
+            <span class="tech-tag-hero"><span class="tag-icon docker-icon"></span>Docker</span>
+            <span class="tech-tag-hero"><span class="tag-icon linux-icon"></span>Linux</span>
+            <span class="tech-tag-hero"><span class="tag-icon node-icon"></span>Node.js</span>
+            <span class="tech-tag-hero"><span class="tag-icon supabase-icon"></span>Supabase</span>
+          </div>
+
+          <div class="cta-group">
+            <a href="#contact" class="btn btn-primary">Deploy a Message</a>
+            <a href="#projects" class="btn btn-secondary">Explore Architecture</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-card-wrapper">
+            <div class="profile-card">
+              <div class="profile-img-container">
+                <img src="profile.jpg" alt="Sholadoye Najib Adebisi" class="profile-img" />
+                <div class="profile-glow"></div>
+              </div>
+              <div class="profile-details">
+                <h3>Sholadoye Najib Adebisi</h3>
+                <p class="role">Cloud Architect & Dev</p>
+                <div class="location">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <span>Ilorin, Nigeria</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <aside>
-        <div class="profile-card">
-          <img src="https://via.placeholder.com/300x200.png?text=Photo" alt="Profile photo" />
-          <p class="muted" style="margin-top:8px">Based in Your City · Open to work</p>
+    </section>
+
+    <!-- Terminal Simulator Section -->
+    <section class="terminal-section" id="terminal-section">
+      <div class="container">
+        <div class="section-header center">
+          <h2>Interactive DevOps Terminal</h2>
+          <p class="section-subtitle">Interact with my system configuration. Type commands or click the buttons below.</p>
         </div>
-      </aside>
-    </section>
 
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p class="muted">I’m a developer focused on building fast, accessible web interfaces. I work with HTML, CSS, and JavaScript and enjoy working across the stack.</p>
-    </section>
+        <div class="terminal-container">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">najib@infrastructure:~</div>
+            <div class="terminal-action">sh</div>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <div class="terminal-line system-out">Welcome to Najib's DevOps Interactive Terminal v1.0.0</div>
+            <div class="terminal-line system-out">Type 'help' to view all available commands.</div>
+            <div class="terminal-line system-out">Currently running on macOS Sandbox environment.</div>
+            <br>
+            <div class="terminal-line prompt-line">
+              <span class="prompt">najib@infra:~$</span>
+              <span class="typed-command" id="currentTyped">cat summary.md</span>
+            </div>
+            <div class="terminal-line system-out command-result-mock" id="initialOutput">
+              <strong>## PROFESSIONAL SUMMARY</strong><br>
+              Backend engineer with a shipping mindset. Built and shipped production systems across multiple hackathons and internships: SparkPredict (AWS ECS/Fargate, RDS, Redis, Bedrock AI), Uniattend (AWS Community Day 2nd Runner-up), and full-stack APIs using Node.js/Express/Supabase. Experienced in DevOps, web security, reverse proxies (Nginx), CI/CD, containerization, and rapid troubleshooting. Currently contributing to backend application development and infrastructure pipelines at Syntexhub.
+            </div>
+          </div>
+          <div class="terminal-input-bar">
+            <span class="prompt">najib@infra:~$</span>
+            <input type="text" id="terminalInput" placeholder="Type command..." autocomplete="off" autofocus />
+          </div>
+        </div>
 
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Project One</h3>
-          <p class="muted">A short description of the project. Links to a demo or repository.</p>
-        </article>
-        <article class="card">
-          <h3>Project Two</h3>
-          <p class="muted">A short description of the project. Links to a demo or repository.</p>
-        </article>
-        <article class="card">
-          <h3>Project Three</h3>
-          <p class="muted">A short description of the project. Links to a demo or repository.</p>
-        </article>
+        <div class="terminal-presets">
+          <span class="preset-label">Presets:</span>
+          <button class="btn-preset" data-cmd="cat summary.md">cat summary.md</button>
+          <button class="btn-preset" data-cmd="docker ps">docker ps</button>
+          <button class="btn-preset" data-cmd="aws sts get-caller-identity">aws sts get-caller-identity</button>
+          <button class="btn-preset" data-cmd="cat contact.txt">cat contact.txt</button>
+          <button class="btn-preset" data-cmd="help">help</button>
+          <button class="btn-preset" data-cmd="clear">clear</button>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p class="muted">Want to work together or have a question? Send a message.</p>
-      <form id="contactForm" class="contact-form" action="#" method="POST">
-        <input class="input" type="text" name="name" placeholder="Your name" required />
-        <input class="input" type="email" name="email" placeholder="Email" required />
-        <textarea class="input" name="message" rows="6" placeholder="Message" required></textarea>
-        <div>
-          <button class="btn btn-primary" type="submit">Send</button>
-          <a class="btn btn-ghost" href="mailto:your.email@example.com">Email directly</a>
+    <!-- Architecture & Projects Section -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Cloud Blueprints & Systems</h2>
+          <p class="section-subtitle">A collection of systems I've designed and deployed, complete with structural cloud layout blueprints.</p>
         </div>
-      </form>
+
+        <div class="architecture-tabs">
+          <button class="tab-btn active" data-tab="sparkpredict">
+            <span class="tab-title">SparkPredict</span>
+            <span class="tab-desc">AI EV Platform</span>
+          </button>
+          <button class="tab-btn" data-tab="uniattend">
+            <span class="tab-title">Uniattend</span>
+            <span class="tab-desc">Attendance Manager</span>
+          </button>
+          <button class="tab-btn" data-tab="chicken-republic">
+            <span class="tab-title">Chicken Republic Capstone</span>
+            <span class="tab-desc">Sales Inventory Intelligence</span>
+          </button>
+          <button class="tab-btn" data-tab="cbt-system">
+            <span class="tab-title">CBT System Backend</span>
+            <span class="tab-desc">Assessment API</span>
+          </button>
+        </div>
+
+        <div class="architecture-content">
+          <!-- SparkPredict Tab -->
+          <div class="tab-pane active" id="pane-sparkpredict">
+            <div class="grid-2col">
+              <div class="blueprint-visual">
+                <div class="blueprint-header">
+                  <span class="blueprint-tag">AWS Cloud Architecture</span>
+                  <span class="blueprint-title">SparkPredict Infrastructure</span>
+                </div>
+                <div class="blueprint-canvas">
+                  <!-- Custom SVG representation of AWS Infrastructure for SparkPredict -->
+                  <svg viewBox="0 0 600 380" class="aws-blueprint-svg">
+                    <!-- VPC box -->
+                    <rect x="20" y="40" width="560" height="320" rx="10" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-dasharray="4 4" />
+                    <text x="35" y="60" fill="var(--accent-cyan)" font-size="11" font-family="JetBrains Mono">VPC (Single Region)</text>
+                    
+                    <!-- Internet Gateway -->
+                    <rect x="270" y="10" width="60" height="25" rx="4" fill="var(--bg-secondary)" stroke="var(--accent-purple)" stroke-width="1" />
+                    <text x="300" y="26" text-anchor="middle" fill="var(--text-primary)" font-size="9" font-family="Inter" font-weight="600">IGW</text>
+                    
+                    <!-- ALB -->
+                    <rect x="260" y="75" width="80" height="35" rx="5" fill="rgba(6, 182, 212, 0.1)" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                    <text x="300" y="96" text-anchor="middle" fill="var(--accent-cyan)" font-size="11" font-family="Inter" font-weight="700">ALB</text>
+                    
+                    <!-- ECS Fargate cluster -->
+                    <rect x="60" y="140" width="480" height="110" rx="8" fill="rgba(112, 0, 255, 0.05)" stroke="var(--accent-purple)" stroke-width="1.5" />
+                    <text x="75" y="160" fill="var(--accent-purple)" font-size="10" font-family="JetBrains Mono">ECS Fargate Cluster (Express Mode)</text>
+                    
+                    <!-- Service Tasks -->
+                    <rect x="80" y="180" width="130" height="50" rx="6" fill="var(--bg-secondary)" stroke="var(--text-muted)" stroke-width="1" />
+                    <text x="145" y="205" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">API Task 1</text>
+                    <text x="145" y="220" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono">NodeJS / Express</text>
+
+                    <rect x="235" y="180" width="130" height="50" rx="6" fill="var(--bg-secondary)" stroke="var(--text-muted)" stroke-width="1" />
+                    <text x="300" y="205" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">API Task 2</text>
+                    <text x="300" y="220" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono">NodeJS / Express</text>
+
+                    <rect x="390" y="180" width="130" height="50" rx="6" fill="rgba(244, 63, 94, 0.1)" stroke="#f43f5e" stroke-width="1" />
+                    <text x="455" y="205" text-anchor="middle" fill="#f43f5e" font-size="11" font-family="Inter">Lambda Worker</text>
+                    <text x="455" y="220" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono">Event Triggered</text>
+                    
+                    <!-- Database & Cache -->
+                    <rect x="80" y="280" width="150" height="60" rx="6" fill="var(--bg-secondary)" stroke="var(--accent-cyan)" stroke-width="1" />
+                    <text x="155" y="305" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">RDS MySQL</text>
+                    <text x="155" y="325" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono">Primary DB</text>
+
+                    <rect x="250" y="280" width="150" height="60" rx="6" fill="var(--bg-secondary)" stroke="var(--accent-cyan)" stroke-width="1" />
+                    <text x="325" y="305" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">ElastiCache Redis</text>
+                    <text x="325" y="325" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono">Session & Real-time</text>
+
+                    <rect x="420" y="280" width="110" height="60" rx="6" fill="var(--bg-secondary)" stroke="var(--accent-purple)" stroke-width="1" />
+                    <text x="475" y="305" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">Amazon Bedrock</text>
+                    <text x="475" y="325" text-anchor="middle" fill="var(--accent-purple)" font-size="9" font-family="Inter" font-weight="600">Claude AI</text>
+                    
+                    <!-- Flow arrows -->
+                    <path d="M 300 35 L 300 75" fill="none" stroke="var(--text-muted)" stroke-width="1" marker-end="url(#arrow)" />
+                    <path d="M 260 92.5 L 145 92.5 L 145 140" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                    <path d="M 340 92.5 L 455 92.5 L 455 140" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                    <path d="M 300 110 L 300 140" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                  </svg>
+                </div>
+              </div>
+              <div class="project-details">
+                <span class="project-badge">AWS Cloud & AI Hackathon</span>
+                <h3>SparkPredict</h3>
+                <p class="project-description">
+                  An AI-powered EV charging intelligence platform providing predictive analytics for EV charging networks. Designed and deployed the entire multi-service infrastructure as the sole DevOps/cloud engineer.
+                </p>
+                <div class="tech-list">
+                  <span class="badge">ECS Fargate</span>
+                  <span class="badge">RDS MySQL</span>
+                  <span class="badge">ElastiCache Redis</span>
+                  <span class="badge">Cognito</span>
+                  <span class="badge">Bedrock / Claude AI</span>
+                  <span class="badge">Lambda</span>
+                  <span class="badge">API Gateway WebSocket</span>
+                </div>
+                
+                <details class="crisis-details">
+                  <summary class="crisis-summary">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    <span>DevOps Incident Response: App Runner Crisis</span>
+                  </summary>
+                  <div class="crisis-content">
+                    <p><strong>The Incident:</strong> Mid-project during a hackathon, AWS App Runner (which was planned as the primary deployment service) unexpectedly became unavailable for new resources.</p>
+                    <p><strong>The Pivot:</strong> I executed a rapid architectural transition, pivoting the entire API runtime onto AWS ECS Fargate using Express Mode with Application Load Balancer (ALB) routing. This configuration was successfully built, configured with chained security groups, and shipped under intense deadline pressure without delaying the project release.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <!-- Uniattend Tab -->
+          <div class="tab-pane" id="pane-uniattend">
+            <div class="grid-2col">
+              <div class="blueprint-visual">
+                <div class="blueprint-header">
+                  <span class="blueprint-tag">Architecture</span>
+                  <span class="blueprint-title">Uniattend System Design</span>
+                </div>
+                <div class="blueprint-canvas">
+                  <svg viewBox="0 0 600 380" class="aws-blueprint-svg">
+                    <!-- Client -->
+                    <rect x="50" y="160" width="100" height="60" rx="8" fill="var(--bg-secondary)" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                    <text x="100" y="190" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">Vite Client</text>
+                    <text x="100" y="205" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="Inter">Frontend App</text>
+                    
+                    <!-- Gateway -->
+                    <rect x="230" y="150" width="120" height="80" rx="8" fill="rgba(112, 0, 255, 0.05)" stroke="var(--accent-purple)" stroke-width="1.5" />
+                    <text x="290" y="185" text-anchor="middle" fill="var(--text-primary)" font-size="12" font-family="Inter" font-weight="600">Node API</text>
+                    <text x="290" y="200" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono">Express Server</text>
+                    <text x="290" y="215" text-anchor="middle" fill="var(--accent-purple)" font-size="9" font-family="Inter">WebSocket Active</text>
+                    
+                    <!-- Supabase / Auth -->
+                    <rect x="430" y="90" width="120" height="70" rx="6" fill="var(--bg-secondary)" stroke="var(--accent-cyan)" stroke-width="1" />
+                    <text x="490" y="120" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">Supabase DB</text>
+                    <text x="490" y="135" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono">PostgreSQL / ORM</text>
+
+                    <!-- Realtime Engine -->
+                    <rect x="430" y="210" width="120" height="70" rx="6" fill="var(--bg-secondary)" stroke="var(--accent-cyan)" stroke-width="1" />
+                    <text x="490" y="240" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">Real-time Auth</text>
+                    <text x="490" y="255" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono">JWT Security</text>
+                    
+                    <!-- Lines -->
+                    <path d="M 150 190 L 230 190" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                    <path d="M 350 180 L 430 130" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                    <path d="M 350 200 L 430 245" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                  </svg>
+                </div>
+              </div>
+              <div class="project-details">
+                <span class="project-badge">AWS Community Day Hackathon (2nd Runner-Up)</span>
+                <h3>Uniattend</h3>
+                <p class="project-description">
+                  An automated student attendance management platform developed within a 48-hour hackathon. Features real-time checking, geolocation verification, and instant roster reports.
+                </p>
+                <div class="tech-list">
+                  <span class="badge">Node.js</span>
+                  <span class="badge">Express.js</span>
+                  <span class="badge">Supabase</span>
+                  <span class="badge">PostgreSQL</span>
+                  <span class="badge">WebSockets</span>
+                  <span class="badge">Prisma ORM</span>
+                </div>
+                <div class="achievement-highlight">
+                  <div class="achievement-icon">🏆</div>
+                  <div>
+                    <strong>2nd Runner-Up Winner</strong> out of dozens of competing engineering teams. Completed working prototype and production-ready server workflows under a 48-hour crunch.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chicken Republic Capstone Tab -->
+          <div class="tab-pane" id="pane-chicken-republic">
+            <div class="grid-2col">
+              <div class="blueprint-visual">
+                <div class="blueprint-header">
+                  <span class="blueprint-tag">Enterprise Architecture</span>
+                  <span class="blueprint-title">Chicken Republic Cloud Design</span>
+                </div>
+                <div class="blueprint-canvas">
+                  <svg viewBox="0 0 600 380" class="aws-blueprint-svg">
+                    <!-- Edge -->
+                    <rect x="30" y="150" width="80" height="60" rx="4" fill="var(--bg-secondary)" stroke="var(--accent-purple)" stroke-width="1" />
+                    <text x="70" y="180" text-anchor="middle" fill="var(--text-primary)" font-size="10" font-family="Inter">Amplify CDN</text>
+                    <text x="70" y="195" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="Inter">Global Static</text>
+                    
+                    <!-- Regional Architecture -->
+                    <rect x="150" y="50" width="410" height="280" rx="8" fill="rgba(6, 182, 212, 0.02)" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                    <text x="165" y="70" fill="var(--accent-cyan)" font-size="10" font-family="JetBrains Mono">AWS Region (Highly Available)</text>
+                    
+                    <!-- Microservices -->
+                    <rect x="180" y="100" width="130" height="70" rx="6" fill="var(--bg-secondary)" stroke="var(--text-muted)" stroke-width="1" />
+                    <text x="245" y="130" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">Inventory Service</text>
+                    <text x="245" y="145" text-anchor="middle" fill="var(--accent-cyan)" font-size="9" font-family="JetBrains Mono">ECS Fargate</text>
+
+                    <rect x="180" y="200" width="130" height="70" rx="6" fill="var(--bg-secondary)" stroke="var(--text-muted)" stroke-width="1" />
+                    <text x="245" y="230" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">Sales Intelligence</text>
+                    <text x="245" y="245" text-anchor="middle" fill="var(--accent-purple)" font-size="9" font-family="JetBrains Mono">SageMaker AI</text>
+                    
+                    <!-- Shared Infrastructure -->
+                    <rect x="360" y="100" width="170" height="70" rx="6" fill="var(--bg-secondary)" stroke="var(--accent-cyan)" stroke-width="1" />
+                    <text x="445" y="130" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">Multi-AZ RDS Aurora</text>
+                    <text x="445" y="145" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono">Auto-Replication</text>
+
+                    <rect x="360" y="200" width="170" height="70" rx="6" fill="var(--bg-secondary)" stroke="var(--accent-purple)" stroke-width="1" />
+                    <text x="445" y="230" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">EventBridge & S3</text>
+                    <text x="445" y="245" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono">Data Lake / Pipeline</text>
+
+                    <!-- Connecting Lines -->
+                    <path d="M 110 180 L 150 180" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                    <path d="M 310 135 L 360 135" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                    <path d="M 310 235 L 360 235" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                  </svg>
+                </div>
+              </div>
+              <div class="project-details">
+                <span class="project-badge">AWS Cloud Club Capstone</span>
+                <h3>Chicken Republic Inventory & Sales Intelligence</h3>
+                <p class="project-description">
+                  Designed a scalable, enterprise-grade cloud architecture for a major restaurant chain. Structured restaurant sales forecasting and automated inventory management loops. Delivered a comprehensive 15-page Statement of Work detailing cost analyses, subnet topologies, security compliance, and recovery workflows.
+                </p>
+                <div class="tech-list">
+                  <span class="badge">AWS VPC</span>
+                  <span class="badge">ECS Fargate</span>
+                  <span class="badge">RDS Aurora MySQL</span>
+                  <span class="badge">SageMaker AI</span>
+                  <span class="badge">EventBridge</span>
+                  <span class="badge">S3</span>
+                  <span class="badge">AWS Amplify</span>
+                </div>
+                <div class="achievement-highlight">
+                  <div class="achievement-icon">📄</div>
+                  <div>
+                    <strong>Statement of Work Delivered:</strong> Created full infrastructure maps, failover schemas, cloud cost modeling, and IAM role hierarchies. Led the capstone design team.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CBT System Backend Tab -->
+          <div class="tab-pane" id="pane-cbt-system">
+            <div class="grid-2col">
+              <div class="blueprint-visual">
+                <div class="blueprint-header">
+                  <span class="blueprint-tag">Application Architecture</span>
+                  <span class="blueprint-title">CBT Engine Integration</span>
+                </div>
+                <div class="blueprint-canvas">
+                  <svg viewBox="0 0 600 380" class="aws-blueprint-svg">
+                    <!-- Client -->
+                    <rect x="40" y="160" width="110" height="60" rx="6" fill="var(--bg-secondary)" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                    <text x="95" y="190" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">React / Vite</text>
+                    <text x="95" y="205" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="Inter">Exam Frontend</text>
+                    
+                    <!-- Middle Tier -->
+                    <rect x="220" y="110" width="140" height="150" rx="8" fill="rgba(112, 0, 255, 0.05)" stroke="var(--accent-purple)" stroke-width="1.5" />
+                    <text x="290" y="135" text-anchor="middle" fill="var(--text-primary)" font-size="12" font-family="Inter" font-weight="600">Express API</text>
+                    
+                    <rect x="235" y="160" width="110" height="30" rx="4" fill="var(--bg-secondary)" stroke="var(--text-muted)" stroke-width="1" />
+                    <text x="290" y="178" text-anchor="middle" fill="var(--text-primary)" font-size="9" font-family="JetBrains Mono">Session Handler</text>
+                    
+                    <rect x="235" y="205" width="110" height="30" rx="4" fill="var(--bg-secondary)" stroke="var(--text-muted)" stroke-width="1" />
+                    <text x="290" y="223" text-anchor="middle" fill="var(--text-primary)" font-size="9" font-family="JetBrains Mono">Auto-Scoring Engine</text>
+
+                    <!-- DB Layer -->
+                    <rect x="430" y="150" width="130" height="80" rx="6" fill="var(--bg-secondary)" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                    <text x="495" y="185" text-anchor="middle" fill="var(--text-primary)" font-size="11" font-family="Inter">Supabase DB</text>
+                    <text x="495" y="200" text-anchor="middle" fill="var(--accent-cyan)" font-size="9" font-family="JetBrains Mono">PostgreSQL Engine</text>
+                    <text x="495" y="215" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="Inter">JWT Auditing</text>
+                    
+                    <!-- Flows -->
+                    <path d="M 150 190 L 220 190" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                    <path d="M 360 190 L 430 190" fill="none" stroke="var(--text-muted)" stroke-width="1" />
+                  </svg>
+                </div>
+              </div>
+              <div class="project-details">
+                <span class="project-badge">Full-Stack Application</span>
+                <h3>CBT System Backend</h3>
+                <p class="project-description">
+                  A high-concurrency Computer-Based Testing (CBT) platform backend. Developed APIs supporting simultaneous exam attempts, session states tracking, JWT role authorizations, security audits, and reliable auto-scoring triggers.
+                </p>
+                <div class="tech-list">
+                  <span class="badge">Node.js</span>
+                  <span class="badge">Express.js</span>
+                  <span class="badge">Supabase</span>
+                  <span class="badge">PostgreSQL</span>
+                  <span class="badge">JWT Auth</span>
+                  <span class="badge">React / Vite</span>
+                </div>
+                <div class="project-features">
+                  <ul>
+                    <li>Role-Based Access Control (RBAC) ensuring candidate vs admin isolation.</li>
+                    <li>Auto-scoring calculations triggered securely upon session timeout or submit.</li>
+                    <li>Supabase database schema with strict constraints protecting test content.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Additional Projects Grid -->
+        <h3 class="subsection-title">More Systems & Tooling</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h4>PayGuard AI Backend</h4>
+            <p>Payment verification engine featuring liveness checks using MediaPipe and Face-API.js, integration with Squad APIs, and JWT auditing.</p>
+            <div class="card-tags">
+              <span>Node.js</span>
+              <span>Supabase</span>
+              <span>Face-API.js</span>
+              <span>Squad API</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h4>Campusreport Portal</h4>
+            <p>Full-stack complaint portal. Containerized using Docker, integrated using AWS ECR image registries, with automated Vercel CI/CD pipelines.</p>
+            <div class="card-tags">
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Docker</span>
+              <span>AWS ECR</span>
+              <span>Vercel</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h4>Linux Infrastructure Scripts</h4>
+            <p>Custom Bash automation tools. Features real-time server monitoring (`server-stat`), automatic folder archival/cleanup (`logcompressor`), and automated multi-user SSH provisioning.</p>
+            <div class="card-tags">
+              <span>Bash</span>
+              <span>Linux</span>
+              <span>Cron Jobs</span>
+              <span>SSH Provisioning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-header center">
+          <h2>Professional Experience</h2>
+          <p class="section-subtitle">A timeline of my hands-on roles building APIs and setting up infrastructure pipelines.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-line"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-date">May 2026 – Present</span>
+                <h3>Backend Developer Intern</h3>
+                <span class="company">Syntexhub</span>
+              </div>
+              <div class="timeline-body">
+                <p>Contributing to backend applications and DevOps architectures under professional pipelines.</p>
+                <ul>
+                  <li>Developing, debugging, and improving RESTful APIs using Node.js and Express.js.</li>
+                  <li>Participating in automated cloud deployments, infrastructure tuning, and CI/CD pipelines.</li>
+                  <li>Collaborating on system integration and improving backend response latency.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-line"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-date">2026</span>
+                <h3>DevOps Intern</h3>
+                <span class="company">HNG 14 (Internship Programme)</span>
+              </div>
+              <div class="timeline-body">
+                <p>Worked in a rapid, highly collaborative DevOps cycle configuring secured web servers.</p>
+                <ul>
+                  <li>Configured and optimized Nginx web servers as high-performance reverse proxies.</li>
+                  <li>Managed SSL/TLS certificate automation and forced HTTPS routing for secure transmission.</li>
+                  <li>Hardened infrastructure environments and automated configurations on Linux instances.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-date">Jan – Feb 2025</span>
+                <h3>Backend Engineering Trainee</h3>
+                <span class="company">ITSA, University of Ilorin</span>
+              </div>
+              <div class="timeline-body">
+                <p>Completed intensive training in production-grade backend paradigms.</p>
+                <ul>
+                  <li>Built modular REST APIs utilizing Node.js, Express.js, and MongoDB schemas.</li>
+                  <li>Established testing workflows using Postman and Thunder Client to validate routes and payloads.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2>Technical Skills</h2>
+          <p class="section-subtitle">My architectural toolkit spans across cloud deployment, automation, and backend systems.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill category 1 -->
+          <div class="skills-category-card">
+            <div class="category-header">
+              <svg viewBox="0 0 24 24" width="22" height="22" stroke="var(--accent-cyan)" stroke-width="2" fill="none"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              <h3>Cloud & DevOps</h3>
+            </div>
+            <ul class="skills-list">
+              <li><strong>AWS:</strong> ECS Fargate, RDS, ElastiCache, Lambda, Cognito, ALB, Bedrock, API Gateway, S3, EventBridge, CloudWatch, ECR, VPC</li>
+              <li><strong>Containers:</strong> Docker, Docker Compose</li>
+              <li><strong>CI/CD Pipelines:</strong> GitHub Actions, Jenkins</li>
+              <li><strong>Networking:</strong> Nginx configuration, SSL/TLS certificates, reverse proxies</li>
+              <li><strong>Automation:</strong> Linux, Bash scripting, Cron schedulers, Infrastructure-as-Code principles</li>
+            </ul>
+          </div>
+
+          <!-- Skill category 2 -->
+          <div class="skills-category-card">
+            <div class="category-header">
+              <svg viewBox="0 0 24 24" width="22" height="22" stroke="var(--accent-purple)" stroke-width="2" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <h3>Backend Development</h3>
+            </div>
+            <ul class="skills-list">
+              <li><strong>Frameworks:</strong> Node.js, Express.js, Astro</li>
+              <li><strong>APIs:</strong> RESTful patterns, WebSocket protocol (real-time communication)</li>
+              <li><strong>Databases:</strong> Supabase, PostgreSQL, MongoDB</li>
+              <li><strong>Tools:</strong> Prisma ORM, JWT, OAuth 2.0, Role-Based Access Control (RBAC)</li>
+            </ul>
+          </div>
+
+          <!-- Skill category 3 -->
+          <div class="skills-category-card">
+            <div class="category-header">
+              <svg viewBox="0 0 24 24" width="22" height="22" stroke="var(--accent-cyan)" stroke-width="2" fill="none"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              <h3>Tools & Education</h3>
+            </div>
+            <ul class="skills-list">
+              <li><strong>Testing:</strong> Postman, Thunder Client, Insomnia</li>
+              <li><strong>Workflow:</strong> Git, GitHub</li>
+              <li><strong>Education:</strong> B.Sc. Telecommunications Science, University of Ilorin (Ongoing)</li>
+              <li><strong>Credentials:</strong> AWS Cloud Practitioner, Huawei Datacom Training</li>
+              <li><strong>Languages:</strong> English (Fluent), Yoruba (Native), Hausa (Basic)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section" id="certifications">
+      <div class="container">
+        <div class="section-header center">
+          <h2>Professional Certifications</h2>
+          <p class="section-subtitle">Verified industry credentials in cloud architecture and networking.</p>
+        </div>
+        <div class="certifications-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card">
+            <div class="cert-badge-visual aws-badge">
+              <svg viewBox="0 0 48 48" width="38" height="38" fill="none"><path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z" fill="var(--accent-cyan)"/><path d="M24 12c-6.63 0-12 5.37-12 12s5.37 12 12 12 12-5.37 12-12-5.37-12-12-12zm-3.5 19.5v-11l9.5 5.5-9.5 5.5z" fill="var(--accent-cyan)"/></svg>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">Amazon Web Services (AWS)</span>
+              <h3>AWS Certified Cloud Practitioner</h3>
+              <p class="cert-description">Validates overall understanding of the AWS Cloud platform, covering basic global infrastructure, architectural principles, security compliance, financial models, and core services.</p>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card">
+            <div class="cert-badge-visual huawei-badge">
+              <svg viewBox="0 0 48 48" width="38" height="38" fill="none"><path d="M24 4L6 14v20l18 10 18-10V14L24 4zm0 6.8l12 6.7v13l-12 6.7-12-6.7v-13l12-6.7z" fill="var(--accent-purple)"/><path d="M24 16v16m-8-12l16 8m-16 0l16-8" stroke="var(--accent-purple)" stroke-width="2"/></svg>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">Huawei Academy</span>
+              <h3>Huawei Datacom Associate (HCIA)</h3>
+              <p class="cert-description">Validates foundational knowledge and skills in data communication, routing and switching, network security, and WLAN basics, certifying competence in enterprise network planning and implementation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Download Section -->
+    <section class="resume-download-section" id="resume-download">
+      <div class="container center">
+        <div class="glass-panel resume-panel">
+          <h3>Access My Credentials</h3>
+          <p>Get a detailed copy of my background, experiences, and qualifications. Download the custom version that fits your team's role requirements.</p>
+          <div class="resume-buttons">
+            <a href="Sholadoye_Adebisi_DevOps_CV_2026.docx" class="btn btn-primary btn-icon" download>
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download DevOps CV (Word)</span>
+            </a>
+            <a href="Sholadoye_Adebisi_Backend_DevOps_CV_2026_UPDATED.docx" class="btn btn-secondary btn-icon" download>
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download Backend / DevOps CV (Word)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="grid-2col align-center">
+          <div>
+            <h2>Deploy a Message</h2>
+            <p class="muted">
+              Have a system that needs scaling, an API that needs building, or want to discuss DevOps best practices? Drop me a message or connect directly.
+            </p>
+            <div class="contact-direct-info">
+              <div class="contact-info-item">
+                <div class="icon-wrap">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <span class="label">Email Me</span>
+                  <a href="mailto:najibsholadoye04@gmail.com" class="value">najibsholadoye04@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="icon-wrap">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <span class="label">Call Me</span>
+                  <a href="tel:+2349067093417" class="value">+234 906 709 3417</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <form id="contactForm" class="contact-form-glass">
+              <div class="form-group">
+                <label for="formName">Name</label>
+                <input class="form-input" id="formName" type="text" name="name" placeholder="Alex Carter" required />
+              </div>
+              <div class="form-group">
+                <label for="formEmail">Email</label>
+                <input class="form-input" id="formEmail" type="email" name="email" placeholder="alex@company.com" required />
+              </div>
+              <div class="form-group">
+                <label for="formMessage">Message</label>
+                <textarea class="form-input" id="formMessage" name="message" rows="5" placeholder="Let's build something scalable..." required></textarea>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit" id="formSubmitBtn">Deploy Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="container center">
-    <p class="muted">© Your Name — <a href="https://github.com" target="_blank">GitHub</a> · <a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="copyright">© 2026 Sholadoye Najib Adebisi. Built with HTML, CSS, and JS.</p>
+      <div class="footer-links">
+        <a href="https://github.com/Bijansholay" target="_blank" rel="noopener noreferrer" id="footerGithubLink">GitHub</a>
+        <a href="https://www.linkedin.com/in/najib-sholadoye-499449302" target="_blank" rel="noopener noreferrer" id="footerLinkedinLink">LinkedIn</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js" defer></script>
